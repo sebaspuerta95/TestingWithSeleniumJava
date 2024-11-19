@@ -5,9 +5,13 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
+/**
+* This test class was created to demonstrate the usage of the Actions class to hover over elements and interact with them. 
+* This test class is related to {@link HoversPage} class that models the page with its fields and methods.
+*/ 
 public class HoversTests extends BaseTestsTAU {
 
-    @Test
+    @Test (groups = "hoverTests")
     public void testHoverUser1(){
         var hoversPage = homePage.clickHovers();
         var figureCaption = hoversPage.hoverOverImage(1);
@@ -17,7 +21,7 @@ public class HoversTests extends BaseTestsTAU {
         assertTrue(figureCaption.getLink().endsWith("/users/1"), "Incorrect link.");
     }
 
-    @Test
+    @Test (groups = "hoverTests", dependsOnMethods = "testHoverUser1")
     public void testHoverUser2(){
         var hoversPage = homePage.clickHovers();
         var figureCaption = hoversPage.hoverOverImage(2);
@@ -27,7 +31,7 @@ public class HoversTests extends BaseTestsTAU {
         assertTrue(figureCaption.getLink().endsWith("/users/2"), "Incorrect link.");
     }
 
-    @Test
+    @Test (groups = "hoverTests", dependsOnMethods = {"testHoverUser1", "testHoverUser2"})
     public void testHoverUser3(){
         var hoversPage = homePage.clickHovers();
         var figureCaption = hoversPage.hoverOverImage(3);
