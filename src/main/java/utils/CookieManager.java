@@ -3,6 +3,9 @@ package utils;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 
+/**
+* This class models the context menu page that is tested in the { @CookiesTests } test class (src/test/cookies). 
+*/
 public class CookieManager {
 
     private WebDriver driver;
@@ -11,6 +14,7 @@ public class CookieManager {
         this.driver = driver;
     }
 
+    // Cookies use the Builder pattern to help create cookies more effitiently. 
     public Cookie buildCookie(String cookieName, String cookieValue){
         Cookie cookie = new Cookie.Builder(cookieName, cookieValue)
                 .domain("the-internet.herokuapp.com")
