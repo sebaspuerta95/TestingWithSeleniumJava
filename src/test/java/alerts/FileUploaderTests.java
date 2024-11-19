@@ -5,8 +5,15 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
+/**
+* This test class is meant to test that a file is uploaded successfully from our computer.  
+* It is related to {@link FileUploaderPage }
+*/ 
 public class FileUploaderTests extends BaseTestsTAU {
 
+    /** We do not need to interact with the file uploading window, we just need to send the file's absolute path as a String using sendKeys() method. 
+    * The test then validates that the correct file name was uploaded. 
+    */
     @Test
     public void testUploadChromeDriver(){
         var fileUploader = homePage.clickFileUploader();
