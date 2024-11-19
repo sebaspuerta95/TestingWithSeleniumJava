@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+/**
+* This class models the context menu page that is tested in the { @ContextMenuTests } test class (src/test/alerts). 
+*/ 
 public class ContextMenuPage {
 
     private WebDriver driver;
@@ -15,6 +18,7 @@ public class ContextMenuPage {
         this.driver = driver;
     }
 
+    // Actions class is used to hover over the desired web element. 
     public void rightClickOnBox(){
         Actions actions = new Actions(driver);
         actions.contextClick(driver.findElement(contextBox)).perform();
