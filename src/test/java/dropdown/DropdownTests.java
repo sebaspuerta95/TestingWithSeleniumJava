@@ -10,7 +10,7 @@ import static org.testng.Assert.*;
 
 /**
 * This test class tests the usage of dropdown elements. It requires the Selenium Support dependency from Maven to be included to the pom.xml file. 
-* It is related to {@link DropdownPage } at src/main/pages
+* It is related to { @DropdownPage } at src/main/pages
 */ 
 public class DropdownTests extends BaseTestsTAU {
 

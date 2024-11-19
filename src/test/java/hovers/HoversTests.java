@@ -2,6 +2,7 @@ package hovers;
 
 import base.BaseTestsTAU;
 import org.testng.annotations.Test;
+import pages.HoversPage;
 
 import static org.testng.Assert.*;
 

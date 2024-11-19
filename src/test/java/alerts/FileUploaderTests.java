@@ -2,6 +2,7 @@ package alerts;
 
 import base.BaseTestsTAU;
 import org.testng.annotations.Test;
+import pages.FileUploaderPage;
 
 import static org.testng.Assert.assertEquals;
 
