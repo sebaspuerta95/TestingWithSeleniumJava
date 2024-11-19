@@ -8,7 +8,7 @@ import static org.testng.Assert.assertTrue;
 /**
 * This test class is an example of how we can add, read or remove cookies to process data. 
 * Cookies use the Builder pattern to help create cookies more effitiently. 
-* It related to { @CookieManager } class. 
+* It related to { @CookieManager } class (src/main/utils). 
 */ 
 public class CookiesTests extends BaseTestsTAU {
 
@@ -21,7 +21,7 @@ public class CookiesTests extends BaseTestsTAU {
     *   <li>The cookie manager deletes the cookie again and it is validated that the cookie is deleted properly.</li>
     * </ol>    
     * 
-    * The getCookieManage can be found in the { @baseTestsTAU } configuration class.
+    * The getCookieManage can be found in the { @baseTestsTAU } configuration class (src/test/base).
     */
     @Test
     public void testDeleteCookie(){
