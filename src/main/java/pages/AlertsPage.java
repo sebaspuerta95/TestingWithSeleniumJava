@@ -3,6 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+/**
+* This class models the JS alerts page page that is tested in the { @JSAlertsTests } test class (src/test/alerts). 
+*/ 
 public class AlertsPage {
 
     private WebDriver driver;
