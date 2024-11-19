@@ -20,6 +20,8 @@ public class CookiesTests extends BaseTestsTAU {
     *   <li>A breakpoint can be added here to ensure that the cookie is stored properly before deleting it.</li>
     *   <li>The cookie manager deletes the cookie again and it is validated that the cookie is deleted properly.</li>
     * </ol>    
+    * 
+    * The getCookieManage can be found in the { @baseTestsTAU } configuration class.
     */
     @Test
     public void testDeleteCookie(){
