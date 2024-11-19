@@ -15,50 +15,63 @@ import utils.WindowManager;
 import java.io.File;
 import java.io.IOException;
 
+/**
+* This is the configuration class for all the tests that are performed on the "The Internet" web page. 
+* It is the starting point to set up the driver and is meant to promote code reusability and maintainability.
+*/ 
 public class BaseTestsTAU {
 
+    // WebDriver and HomePage instances are protected so they can only be used by classes inside the base package and inherited methods. 
     protected WebDriver driver;
-    protected HomePage homePage;
+    protected HomePage homePage; 
 
     /**
      * The set-up could be done in only one @BeforeClass, but all the @Before annotations
      * were include to demonstrate how they could be used together.
      */
 
+    // Chrome driver is being set up properly before every suite.
     @BeforeSuite
     public void browserSetUp() {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-        // Chrome is being set up properly before every suite.
     }
 
+    // Then, the browser is opened at the beginning of every test group.
     @BeforeTest
     public void openBrowser () {
-        driver = new ChromeDriver(getChromeOptions());
-        driver.manage().window().maximize();
-        // Then, the browser is opened at the beginning of every test group.
+        driver = new ChromeDriver();
+        // driver = new ChromeDriver(getChromeOptions()); - We can run Chrome with specific options, like headless. 
+        driver.manage().window().maximize();   
         /**
          * An implicit wait can be added here to manage synchronization problems as follows:
          * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30))
          */
     }
 
+    // This method is useful if multiple classes are run within the same XML file. Preconditions can be written at this point.
     @BeforeClass
     public void goToHomePage(){
-        goHome();
-        // This method is useful if multiple classes are run within the same XML file.
-        // Preconditions can be written at this point.
+        goHome();     
     }
 
+    // Tests start at the home page, so we need to return to it.
     @BeforeMethod
     public void goHome(){
         driver.get("https://the-internet.herokuapp.com/");
         homePage = new HomePage(driver);
-        // Tests start at the home page, so we need to return to it.
     }
 
+    /**
+    * The objective of this method is to take screenshots automatically at test failure, but could be set up to every run.
+    * Process:
+    * <ol>
+    *   <li>The test takes an instance of the ITestResult and verifies if the result is FAILURE to trigger this method.</li>
+    *   <li>The driver is casted to a TakesScreenshot object, so a screenshot can be taken.</li>
+    *   <li>The output file is stored at a specified directory, which in this case, is located within the project.</li>
+    * </ol>    
+    */ 
     @AfterMethod
     public void recordFailure(ITestResult result){
-        // The objective of this method is to take screenshots automatically at test failure, but could be set up to every run.
         if(ITestResult.FAILURE == result.getStatus()) {
             var camera = (TakesScreenshot) driver;
             File screenshot = camera.getScreenshotAs(OutputType.FILE);
@@ -71,6 +84,7 @@ public class BaseTestsTAU {
         }
     }
 
+    // Closes the driver. 
     @AfterClass
     public void tearDown() {
         driver.quit();
