@@ -15,7 +15,7 @@ public class JSAlertsTests extends BaseTestsTAU {
     /** 
     * This method consist in clicking the Alert button, accepting the alert and checking that the correct message is displayed. 
     */ 
-    @Test (priority = 3)
+    @Test (priority = 3, groups = "jsAlerts")
     public void testAcceptAlert(){
         var alertsPage = homePage.clickJavascriptAlerts();
         alertsPage.click_alertButton();
@@ -26,7 +26,7 @@ public class JSAlertsTests extends BaseTestsTAU {
     /** 
     * This method consist in clicking the Confirm button, dismissing the alert and checking that the correct message is displayed. 
     */
-    @Test (priority = 2)
+    @Test (priority = 2, groups = "jsAlerts")
     public void testDismissAlert(){
         var alertsPage = homePage.clickJavascriptAlerts();
         alertsPage.click_confirmButton();
@@ -37,7 +37,7 @@ public class JSAlertsTests extends BaseTestsTAU {
     /** 
     * This method consist in clicking the Prompt button, sending keys the alert and checking that the correct message is displayed. 
     */
-    @Test (priority = 1)
+    @Test (priority = 1, groups = "jsAlerts")
     public void testSendKeys(){
         var alertsPage = homePage.clickJavascriptAlerts();
         alertsPage.click_promptButton();
