@@ -7,7 +7,7 @@ import static org.testng.Assert.*;
 
 /**
 * This test class is an example of usage of the Actions class to send right-clicks to element and interact with JavaScript alerts. 
-* It is related to {@link ContextMenuPage }
+* It is related to { @link ContextMenuPage } (src/main/utils). 
 */ 
 public class ContextMenuTests extends BaseTestsTAU {
 
