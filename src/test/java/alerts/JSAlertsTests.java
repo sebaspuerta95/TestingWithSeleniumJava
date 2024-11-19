@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 /**
-* This test class shows hot to interact with JavaScript alerts using switchTo() method. 
-* This class is related to { @AlertsPage }
+* This test class shows how to interact with JavaScript alerts using switchTo() method. 
+* This class is related to { @AlertsPage } class (src/main/pages)
 * As tests are run in ascending alphabetical order by default, the priority attribute of the test annotation is used to control the order of execution. 
 */ 
 public class JSAlertsTests extends BaseTestsTAU {
