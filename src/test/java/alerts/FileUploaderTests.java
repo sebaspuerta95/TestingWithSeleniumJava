@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 
 /**
 * This test class is meant to test that a file is uploaded successfully from our computer.  
-* It is related to {@link FileUploaderPage }
+* It is related to {@link FileUploaderPage } class (src/main/pages).
 */ 
 public class FileUploaderTests extends BaseTestsTAU {
 
