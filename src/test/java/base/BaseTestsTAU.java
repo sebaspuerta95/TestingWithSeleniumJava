@@ -94,6 +94,10 @@ public class BaseTestsTAU {
         return new WindowManager(driver);
     }
 
+    /**
+    * This method is called from { @CookiesTests } (source/test/cookies) and it creates an intance that allows the usage of the methods from { @CookieManager } (src/main/utils)
+    * These methods allow us to build, create, and delete cookies. 
+    */ 
     public CookieManager getCookieManager(){
         return new CookieManager(driver);
     }
