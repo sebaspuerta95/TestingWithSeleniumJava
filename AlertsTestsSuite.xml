@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AlertsTestSuite">
+    <test name="Configuration">
+        <classes>
+            <class name="alerts.ContextMenuTests">
+                <methods>
+                    <include name="testContextBoxAlert"/>
+                </methods>
+            </class>
+            <class name="alerts.FileUploaderTests">
+                <methods>
+                    <exclude name="testUploadChromeDriver"/>
+                </methods>
+            </class>
+            <class name="alerts.JSAlertsTests">
+                <methods>
+                    <include name="testAcceptAlert"/>
+                    <include name="testDismissAlert"/>
+                    <include name="testSendKeys"/>
+                    <!-- Desired methods can be excluded by changing the reserved word "include" by "exclude" -->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

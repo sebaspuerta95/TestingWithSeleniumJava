@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/sebas/IdeaProjects/seleniumWebDriverWithJava">
+        <classes>
+            <class name="alerts.ContextMenuTests">
+                <methods>
+                    <include name="testContextBoxAlert"/>
+                </methods>
+            </class>
+            <class name="alerts.FileUploaderTests">
+                <methods>
+                    <include name="testUploadChromeDriver"/>
+                </methods>
+            </class>
+            <class name="alerts.JSAlertsTests">
+                <methods>
+                    <include name="testAcceptAlert"/>
+                    <include name="testDismissAlert"/>
+                    <include name="testSendKeys"/>
+                </methods>
+            </class>
+            <class name="cookies.CookiesTests">
+                <methods>
+                    <include name="testDeleteCookie"/>
+                </methods>
+            </class>
+            <class name="dropdown.DropdownTests">
+                <methods>
+                    <include name="testSelectedOption"/>
+                    <include name="testSelectMultipleOptions"/>
+                </methods>
+            </class>
+            <class name="forgotPassword.ForgotPasswordTests">
+                <methods>
+                    <include name="testRetrievePassword"/>
+                </methods>
+            </class>
+            <class name="formyForm.FormTests">
+                <methods>
+                    <include name="testSuccessfulFormFill"/>
+                </methods>
+            </class>
+            <class name="frames.FramesTests">
+                <methods>
+                    <include name="testIncreaseIndentation"/>
+                    <include name="testLeftAndBottomFrames"/>
+                </methods>
+            </class>
+            <class name="horizontalSlider.SliderTests">
+                <methods>
+                    <include name="testRightKey"/>
+                </methods>
+            </class>
+            <class name="hovers.HoversTests">
+                <methods>
+                    <include name="testHoverUser1"/>
+                    <include name="testHoverUser2"/>
+                    <include name="testHoverUser3"/>
+                </methods>
+            </class>
+            <class name="javascript.JavascriptTests">
+                <methods>
+                    <include name="testScrollIntoTable"/>
+                    <include name="testInfiniteScroll"/>
+                </methods>
+            </class>
+            <class name="keyPresses.KeyPressesTests">
+                <methods>
+                    <include name="testBackspace"/>
+                </methods>
+            </class>
+            <class name="login.LoginTests">
+                <methods>
+                    <include name="testSuccessfulLogin"/>
+                </methods>
+            </class>
+            <class name="navigation.NavigationTests">
+                <methods>
+                    <include name="testNavigator"/>
+                    <include name="testSwitchToNewWindow"/>
+                    <include name="testContextClick"/>
+                </methods>
+            </class>
+            <class name="waits.WaitTests">
+                <methods>
+                    <include name="testWaitUntilHidden"/>
+                    <include name="testWaitUntilVisible"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
