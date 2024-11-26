@@ -3,6 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * This class models the context menu page that is tested in the { @FramesTests } test class (src/test/frames).
+ */
 public class NestedFramesPage {
 
     private WebDriver driver;
@@ -15,6 +18,7 @@ public class NestedFramesPage {
         this.driver = driver;
     }
 
+    // We see multiple nested <html> elements, so we need to make sure we enter and exit each frame properly.
     public String getLeftFrameText(){
         driver.switchTo().frame(topFrame);
         driver.switchTo().frame(leftFrame);

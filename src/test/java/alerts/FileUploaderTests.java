@@ -18,6 +18,7 @@ public class FileUploaderTests extends BaseTestsTAU {
     @Test
     public void testUploadChromeDriver(){
         var fileUploader = homePage.clickFileUploader();
+        // This test will fail if this particular document doesn't exist in the local storage.
         fileUploader.uploadFile("C:\\Users\\USER\\Downloads\\Auto - Policy jacket.pdf");
         assertEquals(fileUploader.getUploadedMessage(), "Auto - Policy jacket.pdf", "Incorrect file uploaded.");
     }

@@ -2,6 +2,7 @@ package dropdown;
 
 import base.BaseTestsTAU;
 import org.testng.annotations.Test;
+import pages.DropdownPage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,7 +11,7 @@ import static org.testng.Assert.*;
 
 /**
 * This test class tests the usage of dropdown elements. It requires the Selenium Support dependency from Maven to be included to the pom.xml file. 
-* It is related to { @DropdownPage } at src/main/pages
+* It is related to {@link DropdownPage } at src/main/pages
 */ 
 public class DropdownTests extends BaseTestsTAU {
 

@@ -3,6 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * This class models the context menu page that is tested in the FramesTests test class (src/test/frames).
+ */
 public class WYSIWYGEditorPage {
 
     private WebDriver driver;
@@ -12,6 +15,16 @@ public class WYSIWYGEditorPage {
 
     public WYSIWYGEditorPage (WebDriver driver){
         this.driver = driver;
+    }
+
+    // The switchToFrame and switchOutOfFrame methods are very important to enter and exit the frame after each action because we don't know where the next action is going to be performed.
+    // If we do not handle this properly, we might get the NoSuchElementException exception message.
+    private void switchToFrame(){
+        driver.switchTo().frame(frameArea);
+    }
+
+    private void switchOutOfFrame(){
+        driver.switchTo().parentFrame();
     }
 
     public void clearTextArea(){
@@ -35,14 +48,6 @@ public class WYSIWYGEditorPage {
         String text = driver.findElement(textArea).getText();
         switchOutOfFrame();
         return text;
-    }
-
-    private void switchToFrame(){
-        driver.switchTo().frame(frameArea);
-    }
-
-    private void switchOutOfFrame(){
-        driver.switchTo().parentFrame();
     }
 
 }

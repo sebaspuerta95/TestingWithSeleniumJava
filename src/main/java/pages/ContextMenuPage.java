@@ -1,13 +1,11 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 /**
-* This class models the context menu page that is tested in the { @ContextMenuTests } test class (src/test/alerts). 
+* This class models the context menu page that is tested in the ContextMenuTests test class (src/test/alerts).
 */ 
 public class ContextMenuPage {
 

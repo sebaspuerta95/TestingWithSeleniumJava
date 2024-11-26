@@ -6,13 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import java.io.StringBufferInputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 /**
-* This class models the context menu page that is tested in the { @DropdownTests } test class (src/test/dropdown). 
+* This class models the context menu page that is tested in the DropdownTests test class (src/test/dropdown).
 */ 
 public class DropdownPage {
 

@@ -2,12 +2,13 @@ package alerts;
 
 import base.BaseTestsTAU;
 import org.testng.annotations.Test;
+import pages.AlertsPage;
 
 import static org.testng.Assert.assertEquals;
 
 /**
 * This test class shows how to interact with JavaScript alerts using switchTo() method. 
-* This class is related to { @AlertsPage } class (src/main/pages)
+* This class is related to {@link AlertsPage } class (src/main/pages)
 * As tests are run in ascending alphabetical order by default, the priority attribute of the test annotation is used to control the order of execution. 
 */ 
 public class JSAlertsTests extends BaseTestsTAU {

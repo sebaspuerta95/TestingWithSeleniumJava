@@ -3,6 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * This class models the context menu page that is tested in the ForgotPasswrodTests test class (src/test/forgotPassword).
+ */
 public class ForgotPasswordPage {
 
     private WebDriver driver;
