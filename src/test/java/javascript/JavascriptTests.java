@@ -13,7 +13,7 @@ import static org.testng.Assert.assertEquals;
 public class JavascriptTests extends BaseTestsTAU {
 
     // This test scrolls into a web element that is always visible in the DOM. Its page is modeled in {@link pages.LargeAndDeepDOMPage}. 
-    @Test
+    @Test (groups = "JavascriptScrolls")
     public void testScrollIntoTable(){
         homePage.clickLargeAndDeepDOM().scrollToTable();
     }
@@ -27,7 +27,7 @@ public class JavascriptTests extends BaseTestsTAU {
     *   <li>The test assets if the number of paragraphs equals the index, so we know we are at the desired place.</li>
     * </ol>
     */
-    @Test
+    @Test (groups = "JavascriptScrolls")
     public void testInfiniteScroll(){
         int index = 5;
         var infiniteScroll = homePage.clickInfiniteScroll();
