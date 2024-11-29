@@ -4,7 +4,7 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 
 /**
-* This class models the context menu page that is tested in the { @CookiesTests } test class (src/test/cookies). 
+* This class models the context menu page that is tested in the CookiesTests test class (src/test/cookies). 
 */
 public class CookieManager {
 
