@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 /**
-* This class models the human scroll that is tested in the JavascriptTests test class (src/test/javascript). 
+* This class models the scroll that is tested in the JavascriptTests test class (src/test/javascript). 
 */
 public class LargeAndDeepDOMPage {
 
